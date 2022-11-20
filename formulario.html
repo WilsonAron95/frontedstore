@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#botonenviar").click(function(){
+            if($("#nombre").val() == ""){
+                alert("El campo Nombre no puede estar vacío.");
+                $("#nombre").focus();
+                return false;
+            }
+            if($("#apellidos").val() == ""){
+                alert("El campo Apellidos no puede estar vacío.");
+                $("#apellidos").focus();
+                return false;
+            }
+            if($("#correo").val() == ""){
+                alert("El campo Email no puede estar vacío.");
+                $("#correo").focus();
+                return false;
+            }
+            if($("#direccion").val() == ""){
+                alert("El campo Dirección no puede estar vacío.");
+                $("#direccion").focus();
+                return false;
+            }
+            if($("#telefono").val() == ""){
+                alert("El campo Teléfono no puede estar vacío.");
+                $("#telefono").focus();
+                return false;
+            }
+            if($("#mayor").val() == ""){
+                alert("Debes escribir tu mensaje.");
+                $("#mayor").focus();
+                return false;
+            }
+        
+            return alert("Tus datos se han enviado correctamente");
+        })
+        });
+    </script>
+</head>
+    <header class="header">
+        <a href="index.html">  <!--hipervinculo en el header para cuando den click en él regrese a la pagina principal-->
+            <img class="header__logo"  src="img/logo.png" alt="Logotipo">
+        </a>
+    </header>
+    <nav class="navegacion">
+        <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a>
+        <a class="navegacion__enlace" href="nosotros.html">Nosotros</a>
+        <a class="navegacion__enlace" href="formulario.html">Contactanos</a>
+        <div class="header__cart">
+            <div class="header__cart--notification">0</div>
+            <a href="#"><img src="img/icon-cart-white.svg" alt=""></a>
+        </div>
+    </nav>
+<body>
+    <h2 id="description">¿Tienes alguna consulta?</h2>
+        <form method="post" id="formdata">
+            <label for="nombre">Tu Nombre: </label>
+            <input type="text" name="nombre" id="nombre" required="required"></br>
+            <label for="apellidos">Tus Apellidos: </label>
+            <input type="text" name="apellidos" id="apellidos" required="required"></br>
+            <label for="correo">Tu Email: </label>
+            <input type="email" name="correo" id="correo" required="required"></br>
+            <label for="direccion">Tu Dirección: </label>
+            <input type="text" name="direccion" id="direccion" required="required"></br>
+            <label for="telefono">Tu Teléfono: </label>
+            <input type="telefono" name="telefono" id="telefono" required="required"></br>
+
+            <label for="mayor">Tu Mensaje:</label>
+            <textarea cols="60" rows="5" type="text" name="mayor" id="mayor" placeholder="Escribe tu mensaje aquí..." required="required"></textarea>
+            
+            <input class="buttom" type="button" id="botonenviar" value="Enviar">
+        </form>
+    
+        <footer class="footer">
+            <div>
+                <a href="https://www.facebook.com/aron.yanguaflores"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
+                </svg></a>
+                <a href="https://www.instagram.com/"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <rect x="4" y="4" width="16" height="16" rx="4" />
+                <circle cx="12" cy="12" r="3" />
+                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+                </svg></a>
+                <a href="https://twitter.com/WilsonAron1"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="30" height="30" viewBox="0 0 24 24" stroke-width="1.5" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+                </svg></a>
+            </div>
+            <p class="footer__texto">Front End Store - Todos los derechos Reservados 2022.</p>
+        </footer>
+</body>
+</html>
